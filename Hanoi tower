@@ -1,0 +1,52 @@
+int main() {
+	vector<int> t1, t2, t3;               
+	vector<vector<int>> hanoi;           
+
+	int from, to;        
+	string yesOrNo;      
+
+	int numDisks = 3;   
+
+	
+	hanoi.push_back(t1);/ 
+	hanoi.push_back(t2);
+	hanoi.push_back(t3);
+
+	while (1) {          /
+		
+		initSourceTower(hanoi);
+		int numMove = 0;                                /to count the total number of moves
+		printHanoiTowers(hanoi);
+
+		while (1) {              
+			cout << "\n\nFrom which tower will you move a disk to which tower? (from= [1|2|3] to [1|2|3]) : ";
+			cin >> from >> to;
+
+
+			if (isValidMove(hanoi, from, to) == 1) {         
+				cout << "\n\nMove succeeded!";
+				numMove++;        
+
+				if (isFinishedHanoi(hanoi, to) == 1) {              
+					cout << "\n\nCongratulaion!" << " You solved it in " << numMove << " moves!";
+					cout << "\n\nDo you want to play again? (Y/N): ";
+					cin >> yesOrNo;
+					if (yesOrNo == "N")            
+						return 0;
+					else {
+						hanoi[to - 1].clear();     
+						break;
+					}
+				}
+			}
+			else {                     
+				cout << "\nMove failed!";
+			}
+
+		}
+
+	}
+
+	return 0;
+
+}

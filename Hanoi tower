@@ -1,6 +1,9 @@
 void initSourceTower(vector<vector<int >>& h) {  //Function for initializing the source tower. Stacking disks on the source tower
 
-	int m=3;
+
+	int m=2;
+
+	
 	}
 }
 

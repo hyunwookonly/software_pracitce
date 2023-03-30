@@ -17,16 +17,7 @@ int main() {
 	vector<int> t1, t2, t3;               
 	vector<vector<int>> hanoi;           
 
-	int from, to;        
-	string yesOrNo;      
-
-	int numDisks = 3;   
-
 	
-	hanoi.push_back(t1);/ 
-	hanoi.push_back(t2);
-	hanoi.push_back(t3);
-
 	while (1) {          /
 		
 		initSourceTower(hanoi);
